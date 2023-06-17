@@ -1,0 +1,30 @@
+<div class="containerHero">
+  <h1 id="change">hola</h1>
+  <dl>
+    <td>Nombre:</td>
+    <dd>{{ name }}</dd>
+
+    <td>Edad:</td>
+    <dd>{{ age }}</dd>
+
+    <td>Metodo:</td>
+    <dd>
+      {{ fullNameHero }}
+    </dd>
+
+    <td>Capitalize</td>
+    <dd>{{ capitalizedName }}</dd>
+  </dl>
+
+  <button
+    class="btn btn-primary mx-2"
+    *ngIf="name === 'SpiderMan'"
+    (click)="handleChangeName('Mario')"
+  >
+    Cambiar nombre
+  </button>
+
+  <button (click)="handleChangeAge(16)" class="btn btn-warning">
+    Cambiar edad
+  </button>
+</div>
